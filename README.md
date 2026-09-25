@@ -19,7 +19,7 @@ compare_all_models.py / _v2.py       - merge + full property audit scripts
 grand_comparison_table(_v2).csv      - merged property tables (3 and 20 alloys)
 slide_grand_comparison(_v2).png      - presentation figures
 
-## Headline findings (2026-09-22..24)
+## Headline findings
 | Metric                        | CrabNet          | Qwen-8B (LLM)      | TRIADS (steel ML)   |
 |-------------------------------|------------------|--------------------|---------------------|
 | Role                          | primary screener | red-team reviewer  | red-team reviewer   |
