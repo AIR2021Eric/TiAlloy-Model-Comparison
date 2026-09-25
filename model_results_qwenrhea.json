@@ -1,0 +1,24 @@
+{
+  "model": "qwen-3-8b-rhea-property-predictor",
+  "role": "red-team reviewer (NOT primary screener)",
+  "hardware": "RTX 2000 Ada 8 GB, 4-bit NF4 (bitsandbytes), torch cu121",
+  "throughput_samples_per_s": {
+    "1": 0.291,
+    "2": 0.626,
+    "4": 1.11,
+    "8": 1.711
+  },
+  "crabnet_reference_samples_per_s": 244.33,
+  "reliability": {
+    "deterministic_across_batch_sizes": false,
+    "alloys_with_density_shift": 6,
+    "alloys_with_ys_shift": 6,
+    "alloys_with_phase_flip": 1
+  },
+  "ood_evidence": [
+    "density 5.45-7.85 g/cm3 vs physical Ti gate 3.8-4.8",
+    "RHEA phases (B2/BCC/Al3Ti) predicted on Ti alloys",
+    "RHEA_EXTRAPOLATION flag on 100% of Ti-rich inputs"
+  ],
+  "verdict": "unreliable for Ti-alloy property values; OOD stress-test only"
+}

@@ -1,0 +1,4 @@
+formula,CrabNet_E_Modulus_GPa,CrabNet_Density,CrabNet_Hull_eV,CrabNet_Source,Qwen_Yield_MPa,Qwen_Density,Qwen_Phase,TRIADS_Yield_MPa,TRIADS_Flag,Qwen_Density_Error_Pct
+Ti85V15,118.27,4.705,0.034,archive,1000,5.45,beta,837.39,['OOD_STEEL_BIAS'],15.8
+Ti90Al6V4,113.316,4.457,0.032,archive,1000,5.45,B2,832.84,['OOD_STEEL_BIAS'],22.3
+Ti81Al9Mo2V5Cr3,117.953,4.578,0.028,archive,1150,6.35,B2,829.78,['OOD_STEEL_BIAS'],38.7

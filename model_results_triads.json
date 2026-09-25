@@ -1,0 +1,25 @@
+{
+  "model": "TRIADS (Steels Yield Strength)",
+  "role": "Red-team reviewer (OOD stress-test)",
+  "hardware": "CPU (i7-14700HX), 5-fold ensemble (225K params)",
+  "theoretical_throughput_samples_per_s": {
+    "1": 66.9,
+    "10": 428.0,
+    "100": 2162.5,
+    "1000": 3783.5,
+    "5000": 2991.4,
+    "10000": 2683.9
+  },
+  "e2e_throughput_samples_per_s": {
+    "Pure Steels": 27.3,
+    "Pure Ti-Alloys": 25.98
+  },
+  "best_batch_size_theoretical": 1000,
+  "peak_theoretical_throughput": 3783.5,
+  "ood_evidence": [
+    "Predicts ~830 MPa for BOTH steels and Ti-alloys (regresses to training mean)",
+    "Blind to Ti-physics; OOD_STEEL_BIAS flag applied to 100% of Ti-rich inputs",
+    "End-to-End speed bottlenecked by matminer feature engineering (~26 samples/sec)"
+  ],
+  "verdict": "Extremely fast in theory but heavily bottlenecked by matminer in E2E. Confidently wrong on Ti-alloys; used to validate guardrails."
+}
